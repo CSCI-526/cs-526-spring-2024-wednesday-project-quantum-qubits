@@ -4,20 +4,16 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class Level1ToLevel2 : MonoBehaviour
 {
-     private void OnCollisionEnter2D(Collision2D collision)
-    {
-        LoadScene();
-    }
-
     private void OnTriggerEnter2D(Collider2D other)
     {
-        LoadScene();
+        // Debug.Log("Trigger interaction with " + other.gameObject.tag);
+        if (other.CompareTag("Player"))
+        {
+            // Debug.Log("Trigger interaction with111 " + other.name);
+            SceneManager.LoadScene("Level2"); // Replace "Scene2Name" with the actual name of your Scene 2
+        }
     }
-
-    private void LoadScene()
-    {
-        SceneManager.LoadScene("Level2");
-    }
+   
     // Start is called before the first frame update
     void Start()
     {
