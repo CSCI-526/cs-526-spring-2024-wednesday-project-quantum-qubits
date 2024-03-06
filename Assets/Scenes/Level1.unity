@@ -562,7 +562,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -575.35, y: -172.757}
+  m_AnchoredPosition: {x: -575.35, y: -172.53}
   m_SizeDelta: {x: 1.9179, y: 0.4393}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &391159984
@@ -598,7 +598,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Under flash light to be in ghost state to pass through the wall
+  m_text: When the player is under the spotlight, it becomes a ghost. It is able
+    to pass through pink barriers.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -725,7 +726,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -571.52, y: -172.58}
+  m_AnchoredPosition: {x: -571.52, y: -172.48}
   m_SizeDelta: {x: 1.9179, y: 0.4393}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &411325316
@@ -775,7 +776,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Eat diamond to enter next leverl
+  m_text: 'Touch the green diamond to advance levels!
 
 '
   m_isRightToLeft: 0
@@ -1042,7 +1043,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Use arrow key to move player
+  m_text: Use arrow keys to move player, up to jump!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
