@@ -6,6 +6,7 @@ using UnityEngine.Networking;
 using UnityEngine.Analytics;
 public class Level1ToLevel2 : MonoBehaviour
 {
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         // Debug.Log("Trigger interaction with " + other.gameObject.tag);
@@ -15,6 +16,7 @@ public class Level1ToLevel2 : MonoBehaviour
             StartCoroutine(Post("win1"));
             SceneManager.LoadScene("Level2"); // Replace "Scene2Name" with the actual name of your Scene 2
         }
+
     }
    
     // Start is called before the first frame update
