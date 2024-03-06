@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "ObservationEffect-1.sln"
+    "dotnet.defaultSolution": "cs-526-spring-2024-wednesday-project-quantum-qubits.sln"
 }

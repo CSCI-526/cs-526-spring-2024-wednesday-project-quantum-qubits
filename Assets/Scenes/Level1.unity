@@ -459,7 +459,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54a337a15f8c5469baa0263870427550, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newColor: {r: 1, g: 0, b: 0, a: 1}
+  newColor: {r: 0.37254903, g: 0.7529412, b: 0.34509805, a: 0.46666667}
   passThroughLayerName: GhostPlayer
 --- !u!114 &370245933
 MonoBehaviour:
@@ -562,7 +562,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -575.35, y: -172.757}
+  m_AnchoredPosition: {x: -575.35, y: -172.53}
   m_SizeDelta: {x: 1.9179, y: 0.4393}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &391159984
@@ -598,7 +598,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Under flash light to be in ghost state to pass through the wall
+  m_text: When the player is under the spotlight, it becomes a ghost. It is able
+    to pass through pink barriers.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -682,7 +683,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 391159982}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4c619923d6c924212b1715bc28c80840, type: 3}
   m_Name: 
@@ -725,7 +726,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -571.52, y: -172.58}
+  m_AnchoredPosition: {x: -571.52, y: -172.48}
   m_SizeDelta: {x: 1.9179, y: 0.4393}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &411325316
@@ -775,7 +776,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Eat diamond to enter next leverl
+  m_text: 'Touch the green diamond to advance levels!
 
 '
   m_isRightToLeft: 0
@@ -959,7 +960,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 0.6711262, b: 0.5330188, a: 1}
+  m_Color: {r: 0.54901963, g: 0.5294118, b: 0.15294118, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1042,7 +1043,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Use arrow key to move player
+  m_text: Use arrow keys to move player, up to jump!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1126,7 +1127,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 696654138}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5cf2e724373ac4bf8a8eb3506e055f35, type: 3}
   m_Name: 
@@ -1451,7 +1452,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 0.6711262, b: 0.5330188, a: 1}
+  m_Color: {r: 0.54901963, g: 0.5294118, b: 0.15294118, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1868,8 +1869,8 @@ Transform:
   m_GameObject: {fileID: 1380715980}
   serializedVersion: 2
   m_LocalRotation: {x: -0.003429849, y: 0.0073339962, z: 0.7032997, w: 0.7108474}
-  m_LocalPosition: {x: 1.13, y: 0.23, z: -0.02}
-  m_LocalScale: {x: 1, y: 0.2, z: 1}
+  m_LocalPosition: {x: 1.1239, y: 0.1748, z: -0.0191}
+  m_LocalScale: {x: 1.1104, y: 0.18892, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -2172,7 +2173,7 @@ GameObject:
   - component: {fileID: 2073990089}
   m_Layer: 0
   m_Name: Isometric Diamond
-  m_TagString: Finish
+  m_TagString: Diamond
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
