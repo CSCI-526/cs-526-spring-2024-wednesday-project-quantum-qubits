@@ -1250,8 +1250,9 @@ GameObject:
   - component: {fileID: 336119359}
   - component: {fileID: 336119358}
   - component: {fileID: 336119357}
-  - component: {fileID: 336119356}
   - component: {fileID: 336119355}
+  - component: {fileID: 336119360}
+  - component: {fileID: 336119361}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Spikes
@@ -1274,18 +1275,6 @@ MonoBehaviour:
   pointA: {fileID: 1074446232}
   pointB: {fileID: 1545289426}
   speed: 0.4
---- !u!114 &336119356
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 336119354}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 255ce6c4d81b44353b5c5e0848777d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &336119357
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1398,6 +1387,30 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &336119360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 336119354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ea4f977d329842c8ae64bf4f2e12993, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &336119361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 336119354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1beb7c5aa034f4d779145bd5986681fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &359560624
 GameObject:
   m_ObjectHideFlags: 0
