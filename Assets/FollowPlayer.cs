@@ -15,5 +15,9 @@ public class FollowPlayer : MonoBehaviour
     void Update()
     {
         transform.position = new Vector3(player.transform.position.x+0.4f, transform.position.y, -5);
+        if (Input.GetKeyDown(KeyCode.Escape))
+       {
+           UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+       }
     }
 }
