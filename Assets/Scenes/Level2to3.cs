@@ -5,7 +5,7 @@ using UnityEngine.Networking;
 using UnityEngine.Analytics;
 using UnityEngine;
 
-public class Level2To3 : MonoBehaviour
+public class Level2ToMenu : MonoBehaviour
 {
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -14,7 +14,7 @@ public class Level2To3 : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             
-            SceneManager.LoadScene("Level3"); // Replace "Scene2Name" with the actual name of your Scene 2
+            SceneManager.LoadScene("Menu"); // Replace "Scene2Name" with the actual name of your Scene 2
         }
 
     }

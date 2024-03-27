@@ -16,5 +16,9 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadSceneAsync(0);
     }
-    
+    public void PlayLevel3Game()
+    {
+        SceneManager.LoadSceneAsync(3);
+    }
+
 }
