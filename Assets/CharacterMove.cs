@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.Networking;
+using UnityEngine.Analytics;
 
 public class CharacterMove : MonoBehaviour
 {
@@ -38,7 +41,18 @@ public class CharacterMove : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D other) {
         if (other.gameObject.CompareTag("Floor")) {
+            StartCoroutine(TrackJump());
             inAir = true;
+
         }
+    }
+
+    private IEnumerator TrackJump() {
+            string URL = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSfdji8CdwfD0zEitXGcs9aKSgTElXx9be91O2GoFA4cC7MS1Q/formResponse";
+            WWWForm form = new WWWForm();
+            form.AddField("entry.304903029", AnalyticsSessionInfo.sessionId.ToString());
+            form.AddField("entry.672846850", "Jump - " + SceneManager.GetActiveScene().name);
+            UnityWebRequest www = UnityWebRequest.Post(URL, form);
+            yield return www.SendWebRequest();
     }
 }
