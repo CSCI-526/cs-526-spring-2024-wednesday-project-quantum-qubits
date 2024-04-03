@@ -7,6 +7,8 @@ TagManager:
   - Floor
   - Diamond
   - Spikes
+  - Checkpoint
+  - Players
   layers:
   - Default
   - TransparentFX

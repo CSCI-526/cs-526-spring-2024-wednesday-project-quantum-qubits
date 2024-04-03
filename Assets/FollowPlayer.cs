@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class FollowPlayer : MonoBehaviour
 {
     public GameObject player;
@@ -16,8 +17,10 @@ public class FollowPlayer : MonoBehaviour
     {
         transform.position = new Vector3(player.transform.position.x+0.4f, transform.position.y, -5);
         if (Input.GetKeyDown(KeyCode.Escape))
-       {
+        {
            UnityEngine.SceneManagement.SceneManager.LoadScene(0);
-       }
+        }
+        Debug.Log("player location=" + player.transform.position);
     }
+    
 }

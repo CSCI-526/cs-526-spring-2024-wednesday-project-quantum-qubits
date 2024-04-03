@@ -12,12 +12,19 @@ public class CharacterMove : MonoBehaviour
     // private float vert;
     public float speed;
     public float jump;
-
+    // public GameObject player;
     public bool inAir;
     // Start is called before the first frame update
     void Start()
     {
         rigid = GetComponent<Rigidbody2D>();
+        // player.SetActive(true);
+        // if (RespawnManager.ShouldRespawn)
+        // {
+        //     print("respaw1" + RespawnManager.RespawnPoint);
+        //     player.transform.position = RespawnManager.RespawnPoint; // Move player to respawn point
+        //     RespawnManager.ShouldRespawn = false; // Reset the flag
+        // }
     }
 
     // Update is called once per frame
@@ -30,6 +37,7 @@ public class CharacterMove : MonoBehaviour
         if (inAir == false && Input.GetButtonDown("Vertical")){
             rigid.AddForce(new Vector2(rigid.velocity.x, jump));
         }
+       
 
     }
 
@@ -41,9 +49,11 @@ public class CharacterMove : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D other) {
         if (other.gameObject.CompareTag("Floor")) {
-            StartCoroutine(TrackJump());
+            // StartCoroutine(TrackJump());
             inAir = true;
-
+        //     if (gameObject.activeInHierarchy) {
+        //     StartCoroutine(TrackJump());
+        // }
         }
     }
 
