@@ -5232,7 +5232,6 @@ GameObject:
   - component: {fileID: 1636837748}
   - component: {fileID: 1636837751}
   - component: {fileID: 1636837752}
-  - component: {fileID: 1636837753}
   m_Layer: 0
   m_Name: Isometric Diamond
   m_TagString: Untagged
@@ -5379,18 +5378,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.5}
   m_EdgeRadius: 0
---- !u!114 &1636837753
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1636837747}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c784c33e66263402fb75d83acc44f796, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1652205027
 GameObject:
   m_ObjectHideFlags: 0
