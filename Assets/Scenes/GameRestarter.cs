@@ -19,8 +19,8 @@ public class GameRestarter : MonoBehaviour
         // Check if the colliding object is the player
         if (other.CompareTag("Player"))
         {
-            Debug.Log("hit");
             StartCoroutine(RestartGame());
+            StartCoroutine(MarkOutOfSpotlight());
         }
     }
 
@@ -35,7 +35,6 @@ public class GameRestarter : MonoBehaviour
             form.AddField("entry.672846850", "Died (Spikes) - " + SceneManager.GetActiveScene().name);
             UnityWebRequest www = UnityWebRequest.Post(URL, form);
             yield return www.SendWebRequest();
-            // SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             // Ensure the respawn logic works across scene reloads
             if (RespawnManager.ShouldRespawn)
             {
@@ -43,12 +42,13 @@ public class GameRestarter : MonoBehaviour
             }
 
     }
-    // IEnumerator Post(string s1) {
-    //         string URL = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSfdji8CdwfD0zEitXGcs9aKSgTElXx9be91O2GoFA4cC7MS1Q/formResponse";
-    //         WWWForm form = new WWWForm();
-    //         form.AddField("entry.304903029", AnalyticsSessionInfo.sessionId.ToString());
-    //         form.AddField("entry.672846850", s1);
-    //         UnityWebRequest www = UnityWebRequest.Post(URL, form);
-    //         yield return www.SendWebRequest();
-    // }
+    IEnumerator MarkOutOfSpotlight()
+    {
+        string URL = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSfdji8CdwfD0zEitXGcs9aKSgTElXx9be91O2GoFA4cC7MS1Q/formResponse";
+        WWWForm form = new WWWForm();
+        form.AddField("entry.304903029", AnalyticsSessionInfo.sessionId.ToString());
+        form.AddField("entry.672846850", "Out of Spotlight - " + SceneManager.GetActiveScene().name);
+        UnityWebRequest www = UnityWebRequest.Post(URL, form);
+        yield return www.SendWebRequest();
+    }
 }

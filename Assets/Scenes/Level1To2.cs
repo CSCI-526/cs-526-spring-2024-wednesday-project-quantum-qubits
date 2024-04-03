@@ -4,29 +4,38 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Networking;
 using UnityEngine.Analytics;
-
-
-public class GameRestarterEnemy : MonoBehaviour
+public class Level1To2 : MonoBehaviour
 {
+
     private void OnTriggerEnter2D(Collider2D other)
     {
-        // Check if the colliding object is the player
-        if (other.CompareTag("Player") && other.gameObject.layer != LayerMask.NameToLayer("GhostPlayer"))
+        if (other.CompareTag("Player"))
         {
-            StartCoroutine(RestartGame1());
+            StartCoroutine(NextLevel());
             StartCoroutine(MarkOutOfSpotlight());
         }
+
+    }
+   
+    // Start is called before the first frame update
+    void Start()
+    {
+        
     }
 
     // Update is called once per frame
-    IEnumerator RestartGame1()
+    void Update()
     {
-        // Reload the current scene
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        
+    }
+
+    IEnumerator NextLevel() {
+        SceneManager.LoadScene("Level2");
+
         string URL = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSfdji8CdwfD0zEitXGcs9aKSgTElXx9be91O2GoFA4cC7MS1Q/formResponse";
         WWWForm form = new WWWForm();
         form.AddField("entry.304903029", AnalyticsSessionInfo.sessionId.ToString());
-        form.AddField("entry.672846850", "Died (Enemy) - " + SceneManager.GetActiveScene().name);
+        form.AddField("entry.672846850", "Win - Level 1");
         UnityWebRequest www = UnityWebRequest.Post(URL, form);
         yield return www.SendWebRequest();
     }
