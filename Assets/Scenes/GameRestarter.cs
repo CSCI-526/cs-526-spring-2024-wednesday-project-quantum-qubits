@@ -36,10 +36,7 @@ public class GameRestarter : MonoBehaviour
             UnityWebRequest www = UnityWebRequest.Post(URL, form);
             yield return www.SendWebRequest();
             // Ensure the respawn logic works across scene reloads
-            if (RespawnManager.ShouldRespawn)
-            {
-                player.transform.position = RespawnManager.RespawnPoint;; // Move player to respawn point
-            }
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
     }
     IEnumerator MarkOutOfSpotlight()

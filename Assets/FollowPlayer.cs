@@ -9,6 +9,11 @@ public class FollowPlayer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (RespawnManager.ShouldRespawn)
+            {
+                player.transform.position = RespawnManager.RespawnPoint;; // Move player to respawn point
+                RespawnManager.ShouldRespawn = false;
+            }
 
     }
 

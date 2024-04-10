@@ -11,6 +11,8 @@ public class Level1To2 : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            PlayerPrefs.SetString("CurrentLevel", "1");
+            Debug.Log(SceneManager.GetActiveScene().name);
             StartCoroutine(NextLevel());
             StartCoroutine(MarkOutOfSpotlight());
         }
@@ -30,8 +32,7 @@ public class Level1To2 : MonoBehaviour
     }
 
     IEnumerator NextLevel() {
-        SceneManager.LoadScene("Level2");
-
+        SceneManager.LoadScene("WiningScene");
         string URL = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSfdji8CdwfD0zEitXGcs9aKSgTElXx9be91O2GoFA4cC7MS1Q/formResponse";
         WWWForm form = new WWWForm();
         form.AddField("entry.304903029", AnalyticsSessionInfo.sessionId.ToString());

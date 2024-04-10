@@ -12,6 +12,7 @@ public class Level2To3 : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            PlayerPrefs.SetString("CurrentLevel", "2");
             StartCoroutine(NextLevel());
             StartCoroutine(MarkOutOfSpotlight());
         }
@@ -31,8 +32,8 @@ public class Level2To3 : MonoBehaviour
     }
 
     IEnumerator NextLevel() {
-        SceneManager.LoadScene("Level3");
-
+        SceneManager.LoadScene("WiningScene");
+        RespawnManager.ShouldRespawn = false;
         string URL = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSfdji8CdwfD0zEitXGcs9aKSgTElXx9be91O2GoFA4cC7MS1Q/formResponse";
         WWWForm form = new WWWForm();
         form.AddField("entry.304903029", AnalyticsSessionInfo.sessionId.ToString());
