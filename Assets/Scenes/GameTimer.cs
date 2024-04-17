@@ -35,7 +35,7 @@ public class GameTimer : MonoBehaviour
             if (remainingTime <= 0)
             {
                 StopTimer();
-                timerText.text = "00:00:000";
+                timerText.text = "00:00";
                 // Ensure the display shows zero when the countdown is over
                 RestartScene();
             }
@@ -73,6 +73,6 @@ public class GameTimer : MonoBehaviour
         int minutes = (int)(timeToFormat / 60);
         int seconds = (int)(timeToFormat % 60);
         int milliseconds = (int)((timeToFormat * 1000) % 1000);
-        return string.Format("{0:00}:{1:00}:{2:000}", minutes, seconds, milliseconds);
+        return string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 }
