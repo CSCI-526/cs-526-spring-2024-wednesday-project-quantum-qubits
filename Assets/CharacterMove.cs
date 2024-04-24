@@ -15,6 +15,7 @@ public class CharacterMove : MonoBehaviour
     // public GameObject player;
     public bool inAir;
     // Start is called before the first frame update
+    private Vector3 _platformMovement = Vector3.zero;
     void Start()
     {
         rigid = GetComponent<Rigidbody2D>();
@@ -64,5 +65,10 @@ public class CharacterMove : MonoBehaviour
             form.AddField("entry.672846850", "Jump - " + SceneManager.GetActiveScene().name);
             UnityWebRequest www = UnityWebRequest.Post(URL, form);
             yield return www.SendWebRequest();
+    }
+
+    public void AdjustMovementWhenOnMovingPlatform(Vector3 deltaPosition)
+    {
+        _platformMovement += deltaPosition;
     }
 }
