@@ -7,18 +7,6 @@ using UnityEngine;
 
 public class Level2To3 : MonoBehaviour
 {
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            PlayerPrefs.SetString("CurrentLevel", "2");
-            StartCoroutine(NextLevel());
-            StartCoroutine(MarkOutOfSpotlight());
-        }
-
-    }
-   
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +17,16 @@ public class Level2To3 : MonoBehaviour
     void Update()
     {
         
+    }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            PlayerPrefs.SetString("CurrentLevel", "2");
+            StartCoroutine(NextLevel());
+            StartCoroutine(MarkOutOfSpotlight());
+        }
+
     }
 
     IEnumerator NextLevel() {
