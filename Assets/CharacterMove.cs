@@ -35,9 +35,15 @@ public class CharacterMove : MonoBehaviour
         // vert = Input.GetAxis("Vertical");
         rigid.velocity = new Vector2(speed * horiz, rigid.velocity.y);
 
-        if (inAir == false && Input.GetButtonDown("Vertical")){
+        if (inAir == false && (Input.GetButtonDown("Vertical") || Input.GetKeyDown(KeyCode.Space))){
             rigid.AddForce(new Vector2(rigid.velocity.x, jump));
         }
+        // if (inAir == false && Input.GetKeyDown(KeyCode.Space))
+        // {
+        //     rigid.AddForce(new Vector2(rigid.velocity.x, jump));
+
+        // }
+        
        
 
     }
